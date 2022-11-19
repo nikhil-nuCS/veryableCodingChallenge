@@ -17,3 +17,7 @@
 ###### Unit Testing
 - A few unit test cases have been written to test different views and perform unit testing on the logic.
 - The purpose is to demonstrate the use of mockable classes and the XCTest framework.
+
+
+###### Observations
+- According to the Wireframe, the gray colors used for the text and background have a HEX value of #7E7E7E and #4A4A4A. The colors present in the app in the Assets folder were #7D7D7D and #494949. I have used the ones available in the app.
