@@ -30,7 +30,7 @@ class AccountDetailViewController: UIViewController {
         
     //MARK: Lazy Loads
     private lazy var acctDetailView: AccountDetailView = {
-        let view = AccountDetailView(delegate: self, viewModel: accountInfoVM!)
+        let view = AccountDetailView(delegate: self, viewModel: accountInfoVM)
         return view
     }()
 }

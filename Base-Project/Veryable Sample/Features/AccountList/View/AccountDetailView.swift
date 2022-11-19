@@ -20,7 +20,7 @@ class AccountDetailView: UIView {
     private weak var del: AccountDetailDelegate?
     
     //MARK: Inits
-    init(delegate: AccountDetailDelegate, viewModel: AccountInfoViewModel) {
+    init(delegate: AccountDetailDelegate, viewModel: AccountInfoViewModel?) {
         super.init(frame: .zero)
         self.del = delegate
         setup()
@@ -77,10 +77,13 @@ class AccountDetailView: UIView {
         applyConstraints()
     }
         
-    private func configureUI(withInfomodel: AccountInfoViewModel) {
-        nameLabel.text = withInfomodel.name
-        descriptionLabel.text = withInfomodel.description
-        typeIcon.image = withInfomodel.uiIcon
+    private func configureUI(withInfomodel: AccountInfoViewModel?) {
+        guard let infoModel = withInfomodel else {
+            return
+        }
+        nameLabel.text = infoModel.name
+        descriptionLabel.text = infoModel.description
+        typeIcon.image = infoModel.uiIcon
     }
     
     private func applyConstraints() {
